@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color:black;
+    text-align: center;
+    background-color: #c2dcf4;
+}
+
+.wrapper {
+    /* background-color: #3385FF; */
+    display: flex;
+    gap: 10em;
+    padding-top: 0.3em;
+    justify-content: center; /* Aligns items to the horizontal center */
+}
+
+.left-section li {
+    color: #001433;
+    text-decoration: none;
+    text-align: left;
+
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8em;
+    width: 20em;
+    padding: 1em 2em;
+    height: 10em;
+    min-width: 20em;
+    border-radius: 1em;
+    background-color: #E5F0FF;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button button {
+    background-color: #CCE0FF;
+    color: #001433;
+    height: 3em;
+    width: 10em;
+    border: 1.5px solid #003D99;
+    border-radius: 1em;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.right-section input {
+    height: 3em;
+    width: 100%;
+    border-radius: 1em;
+    outline: none;
+    border: none;
+}
+
+.right-section input::placeholder{
+    color: rgb(169, 169, 169);
+    padding: 0 1em;
+    
+}
+
+.submitBtn {
+    background-color: #003D99;
+    color: #E5F0FF;
+    border: 1px solid #99C2FF;
+    height: 3em;
+    width: 100%;
+    border-radius: 1em;
+    font-weight: 600;
+    font-size: 1em;    
+}
+
+.submitBtn:hover {
+    background-color: #CCE0FF;
+    color: #001433;
+    border: 1px solid #001433;
+    cursor: pointer;
+}
