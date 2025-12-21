@@ -1,17 +1,18 @@
-const parentBtn = document.querySelector(".button")
-const selectMeetBtn = document.querySelector(".selectMeet");
-const selectDiscordBtn = document.querySelector(".selectDiscordVC");
-console.log("Script loaded successfully");
+const meetBtn = document.querySelector(".selectMeet");
+const discordBtn = document.querySelector(".selectDiscordVC");
 
-const disableBtn = (BtnElement) => {
-    if (BtnElement!=selectDiscordBtn) {
-        BtnElement.disabled = true;
-        BtnElement.style.backgroundColor = "Grey";
-    } 
-};
+function toggle(active, inactive) {
+  active.classList.add("active");
+  active.classList.remove("inactive");
 
-parentBtn.addEventListener("click", () => {
-    disableBtn(selectDiscordBtn);
+  inactive.classList.remove("active");
+  inactive.classList.add("inactive");
+}
+
+meetBtn.addEventListener("click", () => {
+  toggle(meetBtn, discordBtn);
 });
 
-
+discordBtn.addEventListener("click", () => {
+  toggle(discordBtn, meetBtn);
+});
