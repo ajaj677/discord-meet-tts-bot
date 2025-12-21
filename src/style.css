@@ -4,9 +4,9 @@
 }
 
 body {
-    color:black;
+    color:#e6e6e6;
     text-align: center;
-    background-color: #c2dcf4;
+    background-color: #0d0a0d;
 }
 
 .wrapper {
@@ -17,8 +17,15 @@ body {
     justify-content: center; /* Aligns items to the horizontal center */
 }
 
+.left-section {
+    width: 10em;
+    padding: 3em;
+    border-radius: 1em;
+    background-color: #171417;
+    border: 1px solid #262326 ;
+}
 .left-section li {
-    color: #001433;
+    color: #e6e6e6;
     text-decoration: none;
     text-align: left;
 
@@ -30,24 +37,31 @@ body {
     justify-content: center;
     gap: 0.8em;
     width: 20em;
-    padding: 1em 2em;
+    margin-top: 1em;
+    padding: 1.3em;
     height: 10em;
     min-width: 20em;
     border-radius: 1em;
-    background-color: #E5F0FF;
+    background-color: #171417;
+    border: 1px solid #262326 ;
+}
+
+#optionBtn {
+    cursor: pointer;
 }
 
 .button {
     display: flex;
+    
     justify-content: space-between;
 }
 
 .button button {
-    background-color: #CCE0FF;
-    color: #001433;
+    background-color: #26151d;
+    color: #ff73a9;
     height: 3em;
     width: 10em;
-    border: 1.5px solid #003D99;
+    border: none;
     border-radius: 1em;
     font-weight: 600;
     font-size: 0.9em;
@@ -63,24 +77,25 @@ body {
 
 .right-section input::placeholder{
     color: rgb(169, 169, 169);
-    padding: 0 1em;
-    
+    padding-left: 1em;
 }
 
+
+
 .submitBtn {
-    background-color: #003D99;
+    background-color: #0d0a0d;
     color: #E5F0FF;
-    border: 1px solid #99C2FF;
+    border: none;
     height: 3em;
     width: 100%;
+    border: 1px solid #262326 ;
     border-radius: 1em;
     font-weight: 600;
     font-size: 1em;    
 }
 
 .submitBtn:hover {
-    background-color: #CCE0FF;
-    color: #001433;
-    border: 1px solid #001433;
+    /* background-color: #1e1a1edf; */
+    border: 1px solid #3e3c3e ;
     cursor: pointer;
 }
