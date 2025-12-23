@@ -16,3 +16,4 @@ meetBtn.addEventListener("click", () => {
 discordBtn.addEventListener("click", () => {
   toggle(discordBtn, meetBtn);
 });
+
