@@ -1,129 +1,109 @@
+:root {
+    --bg-main: #0d0a0d;
+    --bg-card: #171417;
+    --border: #262326;
+    --pink: #ff73a9;
+    --text-light: #e6e6e6;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    color:#e6e6e6;
+    background: var(--bg-main);
+    color: var(--text-light);
     text-align: center;
-    background-color: #0d0a0d;
+    font-family: system-ui, sans-serif;
 }
 
 .wrapper {
-    /* background-color: #3385FF; */
     display: flex;
-    gap: 10em;
+    justify-content: center;
     padding-top: 0.3em;
-    justify-content: center; /* Aligns items to the horizontal center */
-}
-
-.left-section {
-    width: 10em;
-    padding: 3em;
-    border-radius: 1em;
-    background-color: #171417;
-    border: 1px solid #262326 ;
-}
-.left-section li {
-    color: #e6e6e6;
-    text-decoration: none;
-    text-align: left;
-
 }
 
 .right-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 0.8em;
     width: 20em;
-    margin-top: 1em;
     padding: 1.3em;
-    height: 10em;
-    min-width: 20em;
     border-radius: 1em;
-    background-color: #171417;
-    border: 1px solid #262326 ;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
 }
 
-#optionBtn {
-    cursor: pointer;
-}
-
-/* ===== Toggle button states ===== */
+/* ===== Buttons ===== */
 .button {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    gap: 0.5em;
 }
+
 .button button {
-    background-color: #26151d;
-    color: #ff73a9;
+    flex: 1;
     height: 3em;
-    width: 10em;
-    border: none;
     border-radius: 1em;
+    border: none;
     font-weight: 600;
     font-size: 0.9em;
     cursor: pointer;
+    background: #26151d;
+    color: var(--pink);
     transition: all 0.2s ease;
 }
 
-/* Active button */
 .button button.active {
-    background-color: #ff73a9;
-    color: #0d0a0d;
+    background: var(--pink);
+    color: var(--bg-main);
     box-shadow: 0 0 12px rgba(255, 115, 169, 0.4);
     transform: scale(1.02);
 }
 
-/* Inactive button (looks disabled but clickable) */
 .button button.inactive {
-    background-color: #1a0f14;
-    color: #ffffff;
+    background: #1a0f14;
+    color: #fff;
     opacity: 0.6;
     transform: scale(0.96);
 }
 
-/* Optional hover polish */
 .button button:not(.active):hover {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-
+/* ===== Input ===== */
 .right-section input {
     height: 3em;
     width: 100%;
     border-radius: 1em;
-    outline: none;
     border: none;
-}
-
-.right-section input::placeholder{
-    color: rgb(169, 169, 169);
+    outline: none;
     padding-left: 1em;
 }
 
+.right-section input::placeholder {
+    color: #a9a9a9;
+}
 
-
+/* ===== Submit ===== */
 .submitBtn {
-    background-color: #0d0a0d;
-    color: #E5F0FF;
-    border: none;
     height: 3em;
     width: 100%;
-    border: 1px solid #262326 ;
     border-radius: 1em;
     font-weight: 600;
-    font-size: 1em;    
+    font-size: 1em;
+    background: var(--bg-main);
+    color: #E5F0FF;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .submitBtn:hover {
-    background-color: #81818115;
-    color: #ffffff;
+    background: #81818115;
     box-shadow: 0 0 12px #81818118;
     transform: scale(1.02);
-    border: 1px solid #3e3c3e ;
-    cursor: pointer;
+    border-color: #3e3c3e;
 }

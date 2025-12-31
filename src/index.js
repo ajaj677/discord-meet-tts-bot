@@ -1,20 +1,12 @@
-const meetBtn = document.querySelector(".selectMeet");
-const discordBtn = document.querySelector(".selectDiscordVC");
+const buttons = document.querySelectorAll(".button button");
 
-function toggle(active, inactive) {
-  active.classList.add("active");
-  active.classList.remove("inactive");
-
-  inactive.classList.remove("active");
-  inactive.classList.add("inactive");
+function setActive(target) {
+  buttons.forEach(btn => {
+    btn.classList.toggle("active", btn === target);
+    btn.classList.toggle("inactive", btn !== target);
+  });
 }
 
-meetBtn.addEventListener("click", () => {
-  toggle(meetBtn, discordBtn);
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => setActive(btn));
 });
-
-discordBtn.addEventListener("click", () => {
-  toggle(discordBtn, meetBtn);
-});
-
-
