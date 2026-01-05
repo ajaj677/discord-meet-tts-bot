@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Discord TTS Bot Control</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-microphone-slash"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>TTS Bot</h1>
+                    <p>Voice Integration</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>Documentation</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </a>
+            </nav>
+            <div class="spacer"></div>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Disconnected</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-wrapper">
+        <div class="container">
+            <!-- Left Section - Configuration & Controls -->
+            <div class="left-section">
+                <!-- Configuration Card -->
+                <div class="card config-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-cog"></i>
+                            Configuration
+                        </h3>
+                    </div>
+                    <div class="config-section">
+                        <!-- Google Meet Config -->
+                        <div class="config-item">
+                            <label for="meetLink" class="config-label">Google Meet</label>
+                            <div class="config-input-group">
+                                <input 
+                                    type="text" 
+                                    id="meetLink" 
+                                    class="input-field" 
+                                    placeholder="https://meet.google.com/..."
+                                    autocomplete="off"
+                                >
+                                <button class="btn btn-connect" id="joinMeetBtn">
+                                    Connect
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Discord VC Config -->
+                        <div class="config-item">
+                            <label for="discordVC" class="config-label">Discord Voice Channel</label>
+                            <div class="config-input-group">
+                                <input 
+                                    type="text" 
+                                    id="discordVC" 
+                                    class="input-field" 
+                                    placeholder="Channel ID or Discord URL"
+                                    autocomplete="off"
+                                >
+                                <button class="btn btn-connect" id="joinVCBtn">
+                                    Connect
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls Card -->
+                <div class="card compact">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-sliders-h"></i>
+                            Bot Controls
+                        </h3>
+                    </div>
+                    <div class="controls-compact">
+                        <div class="btn-row">
+                            <button class="btn btn-primary" id="startBtn">
+                                <i class="fas fa-play"></i>
+                                <span>Start</span>
+                            </button>
+                            <button class="btn btn-primary" id="stopBtn">
+                                <i class="fas fa-stop"></i>
+                                <span>Stop</span>
+                            </button>
+                            <button class="btn btn-primary" id="restartBtn">
+                                <i class="fas fa-redo"></i>
+                                <span>Restart</span>
+                            </button>
+                            <button class="btn btn-danger" id="disconnectBtn">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Disconnect</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text to Speech Command -->
+                <div class="card compact">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-microphone"></i>
+                            Send TTS Command
+                        </h3>
+                    </div>
+                    <div class="tts-input">
+                        <input 
+                            type="text" 
+                            id="ttsMessage" 
+                            class="input-field" 
+                            placeholder="Enter text to convert to speech..."
+                            autocomplete="off"
+                        >
+                        <button class="btn btn-primary" id="sendTTSBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section - Logs -->
+            <div class="right-section">
+                <div class="card compact card-logs">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-list"></i>
+                            Activity Logs
+                        </h3>
+                        <button class="btn btn-small btn-secondary" id="clearLogsBtn">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="logs-container" id="logsContainer">
+                        <div class="log-entry log-info">
+                            <!-- <span class="log-level">INFO</span> -->
+                            <span class="log-timestamp">14:32:15</span>
+                            <span class="log-message">Ready. Enter Meet & Discord details to start.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
