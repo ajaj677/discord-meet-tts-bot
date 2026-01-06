@@ -243,10 +243,10 @@ body {
     transition: var(--transition);
 }
 
-.card:hover {
+/* .card:hover {
     border-color: rgba(88, 101, 242, 0.3);
     box-shadow: none;
-}
+} */
 
 .card.compact {
     background: var(--bg-card);

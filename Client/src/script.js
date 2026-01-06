@@ -102,7 +102,7 @@ function joinVC() {
     addLog(`Bot is connecting to Discord Voice Channel: ${vc}`, 'info');
     
     setTimeout(() => {
-        addLog('✓ Successfully joined Discord Voice Channel', 'success');
+        addLog('Successfully joined Discord Voice Channel', 'success');
         updateUIState();
     }, 1500);
 }
@@ -156,7 +156,7 @@ function restartBot() {
     
     setTimeout(() => {
         state.botRunning = true;
-        addLog('✓ Bot restarted successfully', 'success');
+        addLog('Bot restarted successfully', 'success');
         updateUIState();
         updateStatusIndicator();
     }, 1200);
@@ -247,8 +247,8 @@ elements.restartBtn.addEventListener('click', restartBot);
 elements.disconnectBtn.addEventListener('click', disconnectAll);
 elements.sendTTSBtn.addEventListener('click', sendTTSCommand);
 elements.clearLogsBtn.addEventListener('click', () => {
-    elements.logsContainer.innerHTML = '<div class="log-entry log-info"><span class="log-time">[' + new Date().toLocaleTimeString('en-US', {hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit'}) + ']</span><span class="log-message">Logs cleared</span></div>';
-    addLog('Logs have been cleared', 'info');
+elements.logsContainer.innerHTML = '<div class="log-entry log-info"><span class="log-time">[' + new Date().toLocaleTimeString('en-US', {hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit'}) + ']</span><span class="log-message">Logs cleared</span></div>';
+addLog('Logs have been cleared', 'info');
 });
 
 // Allow Enter key to send TTS command
